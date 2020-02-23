@@ -1,0 +1,72 @@
+<html>
+<head>
+	<style>
+		body{
+			background-color:blanchedalmond;
+			text-align: center;
+		}
+		input
+		{
+			border-radius: 10px;
+			padding: 10px;
+		}
+		.btn
+		{
+			background-color: crimson;
+  			color: black;
+  			font-weight: 900;
+		}
+		table
+		{
+			text-align: center;
+			padding-left: 33%;
+    		padding-top: 2%;
+    		padding-bottom: 2%;
+		}
+	</style>
+</head>
+<body>
+<script>  
+function validateform()
+{  
+	var name=document.myform.name.value;  
+	var password=document.myform.password.value;  
+	var secondpassword=document.myform.password2.value;  
+	var x=document.myform.email.value;  
+	var atposition=x.indexOf("@");  
+	var dotposition=x.lastIndexOf(".");  
+	if (name==null || name=="")
+	{  
+	  alert("Name can't be blank");  
+	  return false;  
+	}
+	else if(password.length<6)
+	{  
+	  alert("Password must be at least 6 characters long.");  
+	  return false;  
+	}  
+	else if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+	{  
+	  alert("Please enter a valid e-mail address ");  
+	  return false;  
+	}  
+	else  if(password!=secondpassword)
+	{  
+		return true;  
+	}  
+}  
+</script>  
+<body>  
+	<h2 style="font-size: 30px;padding:20px;color: crimson">SignUp</h2>
+	<hr>
+	<form action="fashion_home.html" name="myform" method="post" onsubmit="return validateform()">  
+	<table>
+	<tr><td>Name:</td><td><input type="text" name="name"/></td></tr>
+	<tr><td>Email:</td><td> <input type="text" name="email"/></td></tr>
+	<tr><td>Password:</td><td><input type="password" name="password"/></td></tr>
+	<tr><td>Re-enter Password:</td><td><input type="password" name="password2"/></td></tr>
+	</table>  
+	<input type="submit" value="Register" class="btn">
+	</form>
+</body>
+</html>

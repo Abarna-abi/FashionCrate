@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>Collections</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  height: 200px;
+  width : 200px;
+  border-radius: 50%;
+}
+a:link {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: crimson;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
+</head>
+<body>
+  <h1 style="text-align: center; color: crimson;"><b>Collections</b></h1><br><br>
+<table width="100%">
+	<tr>
+	<td><center>
+    <div class="container">
+      <img src="salwar.jpg" alt="salwar" class="image">
+      <div class="middle">
+        <div class="text">Salwar</div>
+      </div>
+    </div></center></td>
+	<td><center>
+    <div class="container">
+      <a href="saree.html" target="_blank"><img src="saree.jpeg" alt="saree"></a>
+      <div class="middle">
+        <div class="text">Saree</div>
+      </div>
+    </div></center></td>    
+	<td><center>
+    <div class="container">
+      <img src="bridal.jpg" alt="bridal">
+      <div class="middle">
+        <div class="text">Bridalwear</div>
+      </div>
+    </div></center></td>        
+	<td><center>
+    <div class="container">
+      <img src="ethnic.jpg" alt="ethnic">
+      <div class="middle">
+        <div class="text">Ethnicwear</div>
+      </div>
+    </div></center></td>            
+	</tr>
+	<tr>
+	<td><center>
+    <div class="container">
+      <img src="shrug.jpeg" alt="shrug">
+      <div class="middle">
+        <div class="text">Shrug</div>
+      </div>
+    </div></center></td>            
+	<td><center>
+    <div class="container">
+      <img src="casual.jpg" alt="casual">
+      <div class="middle">
+        <div class="text">Casuals</div>
+      </div>
+    </div></center></td>            
+	<td><center>
+    <div class="container">
+      <img src="tshirt.jpg" alt="tshirt">
+      <div class="middle">
+        <div class="text">T-shirt</div>
+      </div>
+    </div></center></td>                
+	<td><center>
+    <div class="container">
+      <img src="palazo.jpeg" alt="palazo">
+      <div class="middle">
+        <div class="text">Palazo</div>
+      </div>
+    </div></center></td>                
+	</tr>
+</table>
+</body>
+</html> 

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Salwar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+* {box-sizing: border-box;}
+
+.img-zoom-container {
+  position: relative;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  width: 200px;
+  height: 300px;
+}
+
+mark {
+  background-color: red;
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<script>
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  img.parentElement.insertBefore(lens, img);
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    e.preventDefault();
+    pos = getCursorPos(e);
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    a = img.getBoundingClientRect();
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+</head>
+<body>
+<div class="row">
+	<div class="topnav">
+		<a href="fashion_home.html">Home</a>
+		<a href="wishlist.html">Wishlist</a>
+		<a href="cart.html">Cart</a>
+		<a href="onsale.html" target="_blank">On Sale</a>
+		<a href="trackorder.html">Track Order</a>
+		<a href="feedback.html">Contact Us</a>
+	  </div>
+	  
+	<div class="column">
+	  <div class="img-zoom-container">
+  	      <img id="myimage" src="foryou2.jpg" width="200" height="300">
+ 	      <div id="myresult" class="img-zoom-result"></div>
+	  </div>
+	</div>
+	<div class="column">
+	    <h1 style="color: crimson;">Womens Silk Salwar with Dupatta</h1>
+	    <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+	    <span class="fa fa-star checked"></span>
+	    <span class="fa fa-star checked"></span>
+	    <span class="fa fa-star"></span>
+	    <h3>Rs.3500</h3>
+	    <h3><strike>Rs.5000</strike></h3>
+	    <h3><mark>Save Rs.1500</mark></h3>
+	    <h3 style= "color: purple;">Quantity</h3>
+	    <select>
+  	   <option value="one">1</option>
+  	   <option value="two">2</option>
+ 	   <option value="three">3</option>
+  	   <option value="four">4</option>
+	   </select>
+	   <h3 style= "color: purple">Size</h3>
+	    <input type="radio" id="m" name="size" value="m">M
+	    <input type="radio" id="l" name="size" value="l">L
+	    <input type="radio" id="xl" name="size" value="xl">XL<br><br>
+	    <input type="submit" value="Add to cart" onclick="alertmsg();">
+	    <input type="submit" value="Buy now">
+	</div>
+	<div class="column">
+	    <h1 style="color: crimson">Description</h1>
+	    <p><i>Women Long Dress Evening Party Sleeveless O Neck Fashion Maxi Dress Women Party Dress New</i></p>
+		<b><i style= "color: purple;">Product Type:</i></b>Salwar Dupatta Set<br><br>
+		<b><i style= "color: purple;">Knit/Woven:</i></b>Woven<br><br>
+		<b><i style= "color: purple;">Back Style:</i></b>Round Back<br><br>
+		<b><i style= "color: purple;">Type of work:</i></b>Thread<br><br>
+		<b><i style= "color: purple;">Neckline:</i></b>Round<br><br>
+		<b><i style= "color: purple;">Occasion:</i></b>Party<br><br>
+		<b><i style= "color: purple;">Sleeves:</i></b>3/4th Sleeves<br><br>
+		<b><i style= "color: purple;">Length:</i></b>Full Length<br><br>
+	    <table>
+	    <tr>
+		<td bgcolor="darkorange">Size</td>
+		<td bgcolor="darkorange">Bust(cm)</td>
+		<td bgcolor="darkorange">Length(cm)</td>
+		<td bgcolor="darkorange">Waist(cm)</td>
+	    </tr>
+	    <tr>
+		<td bgcolor="deeppink">M</td>
+		<td bgcolor="deeppink">88</td>
+		<td bgcolor="deeppink">150</td>
+		<td bgcolor="deeppink">72</td>
+	    </tr>
+	    <tr>
+    <td bgcolor="deeppink">L</td>
+		<td bgcolor="deeppink">92</td>
+		<td bgcolor="deeppink">152</td>
+		<td bgcolor="deeppink">76</td>
+	    </tr>
+	    <tr>
+    <td bgcolor="deeppink">XL</td>
+		<td bgcolor="deeppink">96</td>
+		<td bgcolor="deeppink">154</td>
+		<td bgcolor="deeppink">80</td>
+	    </tr>
+	    </table>
+	</div>
+</div>
+<script>
+imageZoom("myimage", "myresult");
+</script>
+
+</body>
+<script>
+  function alertmsg(){
+    alert("Added to cart");
+  }
+</script>
+</html>

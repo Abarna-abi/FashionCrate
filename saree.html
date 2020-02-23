@@ -1,0 +1,274 @@
+<html>
+<head>
+<title>Saree</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.column {
+  float: left;
+  width: 25%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.checked {
+  color: orange;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+#a1
+{
+ color: blue;
+ text-decoration: none;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.button {
+  background-color: crimson;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<script>
+       function mouseOverImage1() {
+           document.getElementById("img1").src = "blue.jpg";
+       }
+       function mouseOverImage2() {
+           document.getElementById("img2").src = "blue.jpg";
+       }
+       function mouseOverImage3() {
+           document.getElementById("img3").src = "blue.jpg";
+       }
+       function mouseOverImage4() {
+           document.getElementById("img4").src = "blue.jpg";
+       }
+       function mouseOverImage5() {
+           document.getElementById("img5").src = "blue.jpg";
+       }
+       function mouseOverImage6() {
+           document.getElementById("img6").src = "blue.jpg";
+       }
+       function mouseOverImage7() {
+           document.getElementById("img7").src = "blue.jpg";
+       }
+
+       function mouseOutImage1() {
+           document.getElementById("img1").src = "saree1.jpg";
+       }
+	   function mouseOutImage2() {
+           document.getElementById("img2").src = "saree.jpeg";
+       }
+	   function mouseOutImage3() {
+           document.getElementById("img3").src = "saree3.png";
+       }
+	   function mouseOutImage4() {
+           document.getElementById("img4").src = "saree4.jpg";
+       }
+	   function mouseOutImage5() {
+           document.getElementById("img5").src = "saree5.jpg";
+       }
+	   function mouseOutImage6() {
+           document.getElementById("img6").src = "saree6.jpg";
+       }
+	   function mouseOutImage7() {
+           document.getElementById("img7").src = "saree7.jpg";
+       }
+
+</script>
+</head>
+
+<body>
+	<div class="topnav">
+		<a href="fashion_home.html">Home</a>
+		<a href="wishlist.html">Wishlist</a>
+		<a href="cart.html">Cart</a>
+		<a href="onsale.html" target="_blank">On Sale</a>
+		<a href="trackorder.html">Track Order</a>
+		<a href="feedback.html">Contact Us</a>
+	  </div>
+			
+	<p><b><h1 style="color: crimson;">Sarees</h1></b></p>
+<div class="row">
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="saree1.jpg" alt="saree 1" id="img1" onmouseover = "mouseOverImage1()"  onmouseout="mouseOutImage1()"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:red"></i>
+		<h4>Saree</h4>
+		<b>Rs.5000</b><br><br>
+		<strike>Rs.3500</strike>
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="saree.jpeg" alt="saree 2" id="img2" onmouseover = "mouseOverImage2()"  onmouseout="mouseOutImage2()"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:red"></i>
+		<h4>Saree</h4>
+		<b>Rs.3500</b><br><br>
+		<strike>Rs.5000</strike>
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="saree3.png" alt="saree 3" id="img3" onmouseover = "mouseOverImage3()"  onmouseout="mouseOutImage3()"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:red"></i>
+		<h4>Saree</h4>
+		<b>Rs.1500</b><br><br>
+		<strike>Rs.2000</strike>
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="saree4.jpg" alt="saree 4" id="img4" onmouseover = "mouseOverImage4()"  onmouseout="mouseOutImage4()"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:red"></i>
+		<h4>Saree</h4>
+		<b>Rs.500</b><br><br>
+		<strike>Rs.1000</strike>
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+	</div>
+</div>
+
+<br><br>
+
+<div class="row">
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="saree5.jpg" alt="saree 5" id="img5" onmouseover = "mouseOverImage5()"  onmouseout="mouseOutImage5()"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:red"></i>
+		<h4>Saree</h4>
+		<b>Rs.1500</b><br><br>
+		<strike>Rs.300</strike>
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="saree6.jpg" alt="saree 6" id="img6" onmouseover = "mouseOverImage6()"  onmouseout="mouseOutImage6()"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:red"></i>
+		<h4>Saree</h4>
+		<b>Rs.4000</b><br><br>
+		<strike>Rs.6000</strike>
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><img height="300px" width="200px" src="saree7.jpg" alt="saree 7" id="img7" onmouseover = "mouseOverImage7()"  onmouseout="mouseOutImage7()"/></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:red"></i>
+		<h4>Saree</h4>
+		<b>Rs.10000</b><br><br>
+		<strike>Rs.15000</strike>
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+	</div>
+	<div class="column">
+	<table>
+	       <tr>
+	       <td><a href="foryousaree.html" target="_blank"><img height="300px" width="200px" src="saree8.jpg" alt="saree 8"/></a></td>
+	       <td>
+		<i class="fa fa-heart-o" style="font-size:40px;color:red"></i>
+		<h4>Saree</h4>
+		<b>Rs.3200</b><br><br>
+		<strike>Rs.4000</strike>
+	       </td>
+	       </tr>
+	</table>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+	</div>
+</div><br><Br><br>
+<center><a href="saree1.html" class="button">1</a><a href="saree1.html" class="button">2</a><a href="saree1.html" class="button">3</a></center>
+</body>
+</html>
